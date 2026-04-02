@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Документ</title>
+    <style>
+        /* Базовые стили для чистоты и читаемости */
+        :root {
+            --primary-color: #2c3e50;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --link-color: #3498db;
+        }
 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 2rem 1rem;
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .content-text {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .pdf-viewer {
+            width: 100%;
+            height: 600px; /* Высота окна просмотра PDF */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-link:hover {
+            background-color: #1a252f;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+                margin: 1rem 0;
+                border-radius: 0;
+            }
+            
+            .pdf-viewer {
+                height: 400px; /* Меньшая высота для мобильных */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- [МЕСТО 1]: Вставьте заголовок вашего сайта ниже -->
+            <h1>Заголовок Вашего Проекта</h1>
+        </header>
+
+        <main>
+            <section class="content-text">
+                <!-- [МЕСТО 2]: Вставьте ваш основной текст ниже. 
+                     Можно использовать HTML-теги: <p> для абзацев, <ul><li> для списков и т.д. -->
+                <p>
+                    Здесь должен быть ваш вводный текст. Например: "Ниже представлен документ, 
+                    описывающий методологию анализа данных. Вы можете просмотреть его прямо 
+                    на странице или скачать для офлайн-чтения."
+                </p>
+                <p>
+                    Этот текст помогает пользователю понять контекст документа.
+                </p>
+            </section>
+
+            <!-- Окно просмотра PDF -->
+            <!-- [МЕСТО 3]: В имя файла (data="document.pdf") вставьте точное имя вашего PDF-файла -->
+            <object data="Передовые производственные технологии(2).pdf" type="application/pdf" class="pdf-viewer">
+                <p>
+                    Ваш браузер не поддерживает встроенный просмотр PDF. 
+                    <a href="document.pdf">Скачайте документ здесь</a>.
+                </p>
+            </object>
+
+            <div style="text-align: center;">
+                <!-- [МЕСТО 4]: В ссылку (href="document.pdf") также вставьте имя вашего PDF-файла -->
+                <a href="Передовые производственные технологии(2).pdf" class="download-link" download>
+                    Скачать PDF-документ
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <!-- [МЕСТО 5]: Вставьте информацию об авторе или год -->
+            <p>&copy; 2026 Ваше Имя. Все права защищены.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
